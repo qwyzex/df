@@ -1,5 +1,5 @@
 BackgroundColour=34,37,47
-ThemeFile=base16-atelier-forest-256.minttyrc
+ThemeFile=base16-horizon-terminal-dark-256.minttyrc
 Transparency=low
 OpaqueWhenFocused=no
 CursorType=block

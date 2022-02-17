@@ -1,3 +1,9 @@
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+PS1='\n\e[0;31m┌( \e[0;31m$name@\h \e[0;31m)\e[m--\e[0;34m[ \e[1;32m\W \e[0;34m]\e[1;36m`__git_ps1` \n\e[0;31m└λ\e[m '
+# PS1='\n\e[1;32m\e[1;32m@$name \e[m>>\e[1;34m [ \e[1;34m\W `__git_ps1` ] \e[1;33mλ\e[m '
+
 # COMMAND
 alias s='start'
 alias ex='exit'
@@ -23,6 +29,8 @@ alias ll='ls -la'
 alias cc='code'
 alias c.='code .'
 
+alias sw='node C:/Works/Programming/Project/package/git-switch'
+
 #########################################################
 
 
@@ -46,6 +54,12 @@ alias pycharm='winpty D:/"@qwzz"/Apps/"PyCharm Community Edition 2021.2.3"/bin/p
 
 # Sublime Text
 alias sub='winpty C:/"Program Files"/"Sublime Text"/sublime_text.exe'
+
+# Kate
+alias kate='winpty ~/AppData/Local/Kate/bin/kate.exe'
+
+# Android Studio
+alias asd='winpty C:/"Program Files"/Android/"Android Studio"/bin/studio64.exe'
 
 # Figma
 alias figma='winpty C:/Users/"Pro Komputer"/AppData/Local/Figma/Figma.exe'
@@ -111,7 +125,7 @@ alias games='cd ~/Documents/@lololololol/"a - Games"'
 
 # Git Shortcuts
 alias gs='git status'
-alias ga='git add'
+alias gad='git add'
 alias gc='git commit'
 alias gr='git remote'
 alias gps='git push'
@@ -120,7 +134,7 @@ alias gin='git init'
 alias gbr='git branch'
 alias gch='git checkout'
 alias glo='git log'
-
+alias gdf='git diff'
 # NPM Scripts
 alias n='npm'
 alias nr='npm run'
@@ -132,3 +146,7 @@ alias nst='npm start'
 alias npv='npm version'
 
 alias exp='explorer'
+alias nps='npm publish'
+alias gsw='node C:/Works/Programming/Project/package/git-switch/'
+alias gck='git checkout'
+
