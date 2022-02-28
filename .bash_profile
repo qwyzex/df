@@ -1,5 +1,8 @@
 test -f ~/.bashrc && . ~/.bashrc
-name=xaliscoral
+export ANDROID_SDK=C:/Andoid/Sdk
+export PATH=C:/Andoid/Sdk/platform-tools:$PATH
+
+name=Clementine
 
 clear
 

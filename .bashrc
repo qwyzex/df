@@ -1,11 +1,19 @@
+export ANDROID_SDK=C:/Andoid/Sdk
+export PATH=C:/Andoid/Sdk/platform-tools:$PATH
+
+
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
-PS1='\n\e[0;31m┌( \e[0;31m$name@\h \e[0;31m)\e[m--\e[0;34m[ \e[1;32m\W \e[0;34m]\e[1;36m`__git_ps1` \n\e[0;31m└λ\e[m '
-# PS1='\n\e[1;32m\e[1;32m@$name \e[m>>\e[1;34m [ \e[1;34m\W `__git_ps1` ] \e[1;33mλ\e[m '
+
+#PS1='\n\e[0;31m┌( \e[0;31m$name@\h \e[0;31m)\e[m--\e[0;34m[ \e[1;32m\W \e[0;34m]\e[0;33m`__git_ps1` \n\e[0;31m└λ\e[m '
+#PS1='\e[1;32m\e[1;32m$name \e[m=>\e[1;35m { \e[1;35m\W\e[1;31m`__git_ps1` \e[1;35m} \e[1;33mλ\e[m '
+PS1='\n\e[1;32m@$name \e[0;33m(\e[1;35m{ \e[1;36m\W \e[1;35m}\e[0;31m`__git_ps1 ": %s"`\e[0;33m)\n\e[1;32m└\e[0;35m\$\e[0m '
 
 # COMMAND
 alias s='start'
+alias sd='shutdown -s'
+alias sa='shutdown -a'
 alias ex='exit'
 alias ef='logout'
 alias sc='~/Desktop/cancel.bat'
@@ -40,6 +48,7 @@ alias py='winpty ~/AppData/Local/Programs/Python/Python310/python.exe'
 
 alias firefox='winpty C:/"Program Files"/"Mozilla Firefox"/firefox.exe' # Mozilla Firefox
 alias chrome='winpty C:/"Program Files"/Google/Chrome/Application/chrome.exe' # Google Chrome
+alias brave='winpty C:/"Program Files"/BraveSoftware/Brave-Browser/Application/brave.exe'
 alias edge='winpty C:/"Program Files (x86)"/Microsoft/Edge/Application/msedge.exe' # Microsoft Edge
 alias opr='winpty ~/AppData/Local/Programs/"Opera GX"/launcher.exe' # Opera GX
 
@@ -149,4 +158,5 @@ alias exp='explorer'
 alias nps='npm publish'
 alias gsw='node C:/Works/Programming/Project/package/git-switch/'
 alias gck='git checkout'
-
+alias temp='node C:/Works/Programming/Project/package/node-temp/'
+alias fin='shutdown -s && exit 1'
