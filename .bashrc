@@ -127,6 +127,7 @@ alias qx-help='~/qxBash/help.sh'
 
 # Files and Folders
 alias p='cd C:/Works/Programming/Project/'
+alias pp='cd C:/Works/Programming/Project/app'
 alias pro='cd C:/Works/Programming/'
 alias w='cd C:/Works/'
 alias lol='cd ~/Documents/@lololololol'
@@ -160,3 +161,8 @@ alias gsw='node C:/Works/Programming/Project/package/git-switch/'
 alias gck='git checkout'
 alias temp='node C:/Works/Programming/Project/package/node-temp/'
 alias fin='shutdown -s && exit 1'
+alias lf='~/Desktop/lf'
+alias vr='vim ~/.vimrc'
+alias fl='code . && chrome && npm run dev'
+
+alias pkg='cat package.json'
