@@ -1,6 +1,15 @@
 export ANDROID_SDK=C:/Andoid/Sdk
 export PATH=C:/Andoid/Sdk/platform-tools:$PATH
+export L=.lnk
 
+# Morse code
+# _.._ ... ._ ._.. ._. _. ...
+# X     S   A  L    R  N   S
+# I don't think R is ._. in Sqout R is the reverse of K. It's either ._._ or _._.
+
+g() {
+    start ./$1.lnk
+}
 
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
@@ -115,6 +124,9 @@ alias photoshop='winpty C:/"Program Files"/Adobe/"Adobe Photoshop 2021"/Photosho
 alias premiere='winpty C:/"Program Files"/Adobe/"Adobe Premiere Pro 2020"/"Adobe Premiere Pro.exe"'
 alias illustrator='winpty C:/"Program Files"/Adobe/"Adobe Illustrator 2021"/"Support Files"/Contents/Windows/Illustrator.exe'
 
+# Bandicam
+alias band='winpty C:/"Program Files (x86)"/Bandicam/"[gigapurbalingga.net]_cRBndcm5201855"/"Loader.exe"'
+
 # Online
 alias github='start "https://github.com/"'
 alias gmail='start "https://mail.google.com/"'
@@ -160,9 +172,20 @@ alias nps='npm publish'
 alias gsw='node C:/Works/Programming/Project/package/git-switch/'
 alias gck='git checkout'
 alias temp='node C:/Works/Programming/Project/package/node-temp/'
-alias fin='shutdown -s && exit 1'
+
+alias fin='shutdown -s'
+alias fin.='shutdown -s && exit 1'
+
 alias lf='~/Desktop/lf'
 alias vr='vim ~/.vimrc'
 alias fl='code . && chrome && npm run dev'
 
 alias pkg='cat package.json'
+alias mi='v ~/Documents/emails_backup.txt'
+
+alias ca='cargo'
+
+alias ru='cd C:/Works/Programming/Project/rust'
+alias y='yarn'
+
+alias js='cd C:/Works/Programming/Project/javascript'
